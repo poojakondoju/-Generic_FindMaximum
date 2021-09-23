@@ -1,18 +1,6 @@
 package com.max;
 
-public class FindMaximum<T extends Comparable<T>> {
-T x, y, z;
-	
-	public FindMaximum( T x, T y, T z) {
-		//super();
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
-	
-	public T maximum() {
-		return FindMaximum.testMax(x, y, z);
-	}
+public class FindMaximum {
 
 public static void main(String[] args) {
 	
@@ -28,32 +16,27 @@ public static void main(String[] args) {
 	String name2 = "Banana";
 	String name3 = "Peach";
 	
-	FindMaximum<Integer> printMaxInteger = new FindMaximum<Integer>(num1, num2, num3);
-	printMaxInteger.maximum();
+	Integer maxInteger = testMax(num1, num2, num3);
+	System.out.println("Maximum Integer is : "+maxInteger);
 	
-	FindMaximum<Float> printMaxFloat = new FindMaximum<Float>(number1, number2, number3);	
-	printMaxFloat.maximum();
+	Float maxFloat = testMax(number1, number2, number3);
+	System.out.println("MAx Float is :"+maxFloat);
 	
-	FindMaximum<String> printMaxString = new FindMaximum<String>(name1, name2, name3);
-	printMaxString.maximum();
-	
+	String maxString = testMax(name1,name2,name3);
+	System.out.println("Maximum String is : "+maxString);
 	}
 
 	public static <T extends Comparable<T>> T testMax(T x, T y, T z) {
 		
 		T max = x;
-		if(y.compareTo(max) > 0 ) {
+		if(y.compareTo(max) > 0 )
+		{
 			max = y;
 		}
-		if(z.compareTo(max) > 0 ) {
+		if(z.compareTo(max) > 0 )
+		{
 			max = z;
 		}
-		printMax(x, y, z, max);
 		return max;
-	}
-	
-
-	public static <T> void printMax(T x, T y, T z, T maximum) {
-		System.out.printf("Max of %s, %s and %s is %s \n", x, y, z, maximum);
 	}
 }
