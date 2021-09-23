@@ -3,40 +3,25 @@ package com.max;
 public class FindMaximum {
 
 public static void main(String[] args) {
-	
-	Integer num1 = 9;
-	Integer num2 = 8;
-	Integer num3 = 5;
-	
-	Float number1 = 2.3f;
-	Float number2 = 5.1f;
-	Float number3 = 3.9f;
 		
-	String name1 = "Apple";
-	String name2 = "Banana";
-	String name3 = "Peach";
-	
-	Integer maxInteger = testMax(num1, num2, num3);
-	System.out.println("Maximum Integer is : "+maxInteger);
-	
-	Float maxFloat = testMax(number1, number2, number3);
-	System.out.println("MAx Float is :"+maxFloat);
-	
-	String maxString = testMax(name1,name2,name3);
-	System.out.println("Maximum String is : "+maxString);
+		Integer num1 = 2;
+		Integer num2 = 5;
+		Integer num3 = 3;
+		Integer maximumNum = testMax(num1,num2,num3);
+		System.out.println("Maximum number is : "+maximumNum);
 	}
 
-	public static <T extends Comparable<T>> T testMax(T x, T y, T z) {
+	public static Integer testMax(Integer num1, Integer num2, Integer num3) {
 		
-		T max = x;
-		if(y.compareTo(max) > 0 )
+		Integer maximumNumber = num1;
+		if(num2.compareTo(maximumNumber) > 0 )
 		{
-			max = y;
+			maximumNumber = num2;
 		}
-		if(z.compareTo(max) > 0 )
+		if(num3.compareTo(maximumNumber) > 0 )
 		{
-			max = z;
+			maximumNumber = num3;
 		}
-		return max;
+		return maximumNumber;
 	}
 }
