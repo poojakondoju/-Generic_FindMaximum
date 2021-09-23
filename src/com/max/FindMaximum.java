@@ -4,16 +4,16 @@ public class FindMaximum {
 
 public static void main(String[] args) {
 		
-		Float num1 = 8.6f;
-		Float num2 = 5.9f;
-		Float num3 = 1.3f;
-		Float maximumNum = testMax(num1,num2,num3);
-		System.out.println("Maximum number is : "+maximumNum);
+	String name1 = "Apple";
+	String name2 = "Peach";
+	String name3 = "Banana";
+	String maximum = testMax(name1,name2,name3);
+	System.out.println("Maximum String is : "+maximum);
 	}
 
-	public static Float testMax(Float num1, Float num2, Float num3) {
+	public static String testMax(String num1, String num2, String num3) {
 		
-		Float maximumNumber = num1;
+		String maximumNumber = num1;
 		if(num2.compareTo(maximumNumber) > 0 )
 		{
 			maximumNumber = num2;
